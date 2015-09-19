@@ -15,6 +15,7 @@ namespace AOACollections.Models
             [DisplayName("Movie Name")]
             public string MovieName { get; set; }
 
+
             [DisplayName("Description")]
             public string Description { get; set; }
 
