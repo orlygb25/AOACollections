@@ -52,3 +52,4 @@ C:\Users\OrlyGB\git\AOACollections\AOACollections\bin\Microsoft.Owin.Security.Tw
 C:\Users\OrlyGB\git\AOACollections\AOACollections\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\OrlyGB\git\AOACollections\AOACollections\obj\Debug\AOACollections.dll
 C:\Users\OrlyGB\git\AOACollections\AOACollections\obj\Debug\AOACollections.pdb
+C:\Users\OrlyGB\git\AOACollections\AOACollections\obj\Debug\AOACollections.csprojResolveAssemblyReference.cache
