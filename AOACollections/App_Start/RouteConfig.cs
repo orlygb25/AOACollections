@@ -16,7 +16,7 @@ namespace AOACollections
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Body", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
