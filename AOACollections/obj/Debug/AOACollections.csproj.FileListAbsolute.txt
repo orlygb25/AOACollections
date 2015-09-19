@@ -50,6 +50,5 @@ C:\Users\OrlyGB\git\AOACollections\AOACollections\bin\Microsoft.Owin.Security.OA
 C:\Users\OrlyGB\git\AOACollections\AOACollections\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\OrlyGB\git\AOACollections\AOACollections\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\OrlyGB\git\AOACollections\AOACollections\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\OrlyGB\git\AOACollections\AOACollections\obj\Debug\AOACollections.csprojResolveAssemblyReference.cache
 C:\Users\OrlyGB\git\AOACollections\AOACollections\obj\Debug\AOACollections.dll
 C:\Users\OrlyGB\git\AOACollections\AOACollections\obj\Debug\AOACollections.pdb

@@ -1,25 +1,26 @@
 ﻿<!doctype html>
 <html>
 <head>
-    <title>AOACollections</title>
+    <title>A.O.A Collections</title>
     @Styles.Render("~/Content/StyleSheet.css")
 </head>
 <body>
     <header>
-        <h1 class="hablog">Ha-Blog Shel Shauli
+        <h1 class="headline">A.O.A Collections</h1>
     </header>
     <nav>
         <!-- Navigation -->
         <ul>
             <li class="selected">@Html.ActionLink("Home", "Index", "Body")</li>
+            <li>@Html.ActionLink("Movies", "Index", "Movies")</li>
+            <li><a href="#">Orders</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">Contact Us</a></li>
             <li>
                 <!-- Seperate RSS inage from Tiltle -->
                 <div id="transImg">
                     <div class="hover">
-                        <img id="rssLogo" src="images/rss.png" width="30" height="30">
+                        <img id="rssLogo" src="~/images/rss.png" width="30" height="30">
                     </div>
                 </div>
             </li>
@@ -30,9 +31,9 @@
     <section id="intro">
         <!-- Introduction -->
         <header>
-            <h2>Do you have questions for me?</h2>
+            <h2>Welcome</h2>
         </header>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+        
         <img src="~/images/intro_shauli.png" alt="Shauli" />
     </section>
 
