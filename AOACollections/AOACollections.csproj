@@ -177,7 +177,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\MoviesStyleSheet.css" />
-    <Content Include="Content\OrdersStyleSheet.css" />
+    <Content Include="Content\CustomersStyleSheet.css" />
     <Content Include="Content\StyleSheet.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

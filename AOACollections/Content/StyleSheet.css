@@ -120,10 +120,10 @@ nav {
 	position: relative;
 	margin-top: 66px;
 	padding: 44px;
-	background: -webkit-linear-gradient(#B4DD10, #467612); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#B4DD10, #467612); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#B4DD10, #467612); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#B4DD10, #467612); /* Standard syntax (must be last) */
+	background: -webkit-linear-gradient(#4682B4 , #FFFFFF); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#4682B4 , #FFFFFF); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#4682B4 , #FFFFFF); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#4682B4 , #FFFFFF); /* Standard syntax (must be last) */
 	
 	/* Background-size not implemented yet */
 	-webkit-background-size: 100%;
