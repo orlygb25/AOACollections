@@ -12,10 +12,6 @@ namespace AOACollections.Models
         [DisplayName("Order Number")]
         public int ID { get; set; }
 
-        [DisplayName("Delivery Number")]
-        public int DevNum { get; set; }
-
-
         [DisplayName("Movie Number")]
         public int MovieNumber { get; set; }
 
@@ -28,14 +24,6 @@ namespace AOACollections.Models
 
         [DisplayName("User Name")]
         public int UserName { get; set; }
-
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        public DateTime OpenDeliveryDate { get; set; }
-
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        public DateTime CloseDeliveryDate { get; set; }
 
         public Order()
         {

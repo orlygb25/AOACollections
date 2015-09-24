@@ -161,6 +161,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BodyController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\DeliveriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManagersController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
@@ -170,6 +171,7 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AOADBContext.cs" />
+    <Compile Include="Models\Delivery.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Models\Movie.cs" />
@@ -253,6 +255,11 @@
     <Content Include="Views\Orders\Details.cshtml" />
     <Content Include="Views\Orders\Edit.cshtml" />
     <Content Include="Views\Orders\Index.cshtml" />
+    <Content Include="Views\Deliveries\Create.cshtml" />
+    <Content Include="Views\Deliveries\Delete.cshtml" />
+    <Content Include="Views\Deliveries\Details.cshtml" />
+    <Content Include="Views\Deliveries\Edit.cshtml" />
+    <Content Include="Views\Deliveries\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -17,5 +17,7 @@ namespace AOACollections.Models
         {
             Database.SetInitializer<AOADBContext>(null);
         }
+
+        public System.Data.Entity.DbSet<AOACollections.Models.Delivery> Deliveries { get; set; }
     }
 }
