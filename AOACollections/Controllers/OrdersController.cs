@@ -10,107 +10,107 @@ using AOACollections.Models;
 
 namespace AOACollections.Controllers
 {
-    public class MoviesController : Controller
+    public class OrdersController : Controller
     {
         private AOADBContext db = new AOADBContext();
 
-        // GET: Movies
+        // GET: Orders
         public ActionResult Index()
         {
-            return View(db.Movies.ToList());
+            return View(db.Orders.ToList());
         }
 
-        // GET: Movies/Details/5
+        // GET: Orders/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Movie movie = db.Movies.Find(id);
-            if (movie == null)
+            Order order = db.Orders.Find(id);
+            if (order == null)
             {
                 return HttpNotFound();
             }
-            return View(movie);
+            return View(order);
         }
 
-        // GET: Movies/Create
+        // GET: Orders/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Movies/Create
+        // POST: Orders/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,MovieName,Description,Category")] Movie movie)
+        public ActionResult Create([Bind(Include = "ID,DevNum,MovieNumber,OrderDate,Quantity,UserName,OpenDeliveryDate,CloseDeliveryDate")] Order order)
         {
             if (ModelState.IsValid)
             {
-                db.Movies.Add(movie);
+                db.Orders.Add(order);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(movie);
+            return View(order);
         }
 
-        // GET: Movies/Edit/5
+        // GET: Orders/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Movie movie = db.Movies.Find(id);
-            if (movie == null)
+            Order order = db.Orders.Find(id);
+            if (order == null)
             {
                 return HttpNotFound();
             }
-            return View(movie);
+            return View(order);
         }
 
-        // POST: Movies/Edit/5
+        // POST: Orders/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,MovieName,Description,Category")] Movie movie)
+        public ActionResult Edit([Bind(Include = "ID,DevNum,MovieNumber,OrderDate,Quantity,UserName,OpenDeliveryDate,CloseDeliveryDate")] Order order)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(movie).State = EntityState.Modified;
+                db.Entry(order).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(movie);
+            return View(order);
         }
 
-        // GET: Movies/Delete/5
+        // GET: Orders/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Movie movie = db.Movies.Find(id);
-            if (movie == null)
+            Order order = db.Orders.Find(id);
+            if (order == null)
             {
                 return HttpNotFound();
             }
-            return View(movie);
+            return View(order);
         }
 
-        // POST: Movies/Delete/5
+        // POST: Orders/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Movie movie = db.Movies.Find(id);
-            db.Movies.Remove(movie);
+            Order order = db.Orders.Find(id);
+            db.Orders.Remove(order);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

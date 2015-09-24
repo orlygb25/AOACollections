@@ -10,10 +10,9 @@ namespace AOACollections.Models
 {
     public class Customer
     {
-        public int ID { get; set; }
-
+        
             [DisplayName("User Name")]
-            public string UserName { get; set; }
+            public int ID { get; set; }
 
             [DisplayName("First Name")]
             public string FirstName { get; set; }
@@ -34,21 +33,19 @@ namespace AOACollections.Models
             [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
             public DateTime RegistrationDate { get; set; }
 
+            [DisplayName("Password")]
+            public PasswordPropertyTextAttribute Password { get; set; }
+
             public Customer()
             {
                 RegistrationDate = DateTime.Now;
             }
+
     }
 
     public enum Gender
     {
         Male,
         Female
-    }
-
-    public class CustomerDBContext : DbContext
-    {
-        public DbSet<Customer> order;
-        public System.Data.Entity.DbSet<AOACollections.Models.Customer> Orders { get; set; }
     }
 }

@@ -28,12 +28,6 @@ namespace AOACollections.Models
             }
 
     }
-        public class MovieDBContext : DbContext
-        {
-            public DbSet<Movie> movie;
-            public System.Data.Entity.DbSet<AOACollections.Models.Movie> Movies { get; set; }
-        }
-
         public enum Category
         {
             Drama,

@@ -10,107 +10,107 @@ using AOACollections.Models;
 
 namespace AOACollections.Controllers
 {
-    public class MoviesController : Controller
+    public class ManagersController : Controller
     {
         private AOADBContext db = new AOADBContext();
 
-        // GET: Movies
+        // GET: Managers
         public ActionResult Index()
         {
-            return View(db.Movies.ToList());
+            return View(db.Managers.ToList());
         }
 
-        // GET: Movies/Details/5
+        // GET: Managers/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Movie movie = db.Movies.Find(id);
-            if (movie == null)
+            Manager manager = db.Managers.Find(id);
+            if (manager == null)
             {
                 return HttpNotFound();
             }
-            return View(movie);
+            return View(manager);
         }
 
-        // GET: Movies/Create
+        // GET: Managers/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Movies/Create
+        // POST: Managers/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,MovieName,Description,Category")] Movie movie)
+        public ActionResult Create([Bind(Include = "ID,FirstName,LastName,Password")] Manager manager)
         {
             if (ModelState.IsValid)
             {
-                db.Movies.Add(movie);
+                db.Managers.Add(manager);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(movie);
+            return View(manager);
         }
 
-        // GET: Movies/Edit/5
+        // GET: Managers/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Movie movie = db.Movies.Find(id);
-            if (movie == null)
+            Manager manager = db.Managers.Find(id);
+            if (manager == null)
             {
                 return HttpNotFound();
             }
-            return View(movie);
+            return View(manager);
         }
 
-        // POST: Movies/Edit/5
+        // POST: Managers/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,MovieName,Description,Category")] Movie movie)
+        public ActionResult Edit([Bind(Include = "ID,FirstName,LastName,Password")] Manager manager)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(movie).State = EntityState.Modified;
+                db.Entry(manager).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(movie);
+            return View(manager);
         }
 
-        // GET: Movies/Delete/5
+        // GET: Managers/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Movie movie = db.Movies.Find(id);
-            if (movie == null)
+            Manager manager = db.Managers.Find(id);
+            if (manager == null)
             {
                 return HttpNotFound();
             }
-            return View(movie);
+            return View(manager);
         }
 
-        // POST: Movies/Delete/5
+        // POST: Managers/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Movie movie = db.Movies.Find(id);
-            db.Movies.Remove(movie);
+            Manager manager = db.Managers.Find(id);
+            db.Managers.Remove(manager);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
