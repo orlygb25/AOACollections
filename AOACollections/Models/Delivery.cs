@@ -21,5 +21,7 @@ namespace AOACollections.Models
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime CloseDeliveryDate { get; set; }
+
+        public virtual List<Order> Orders { get; set; }
     }
 }

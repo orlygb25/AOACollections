@@ -25,6 +25,8 @@ namespace AOACollections.Models
         [DisplayName("User Name")]
         public int UserName { get; set; }
 
+        public virtual Delivery Delivery { get; set; }
+
         public Order()
         {
             OrderDate = DateTime.Now;
