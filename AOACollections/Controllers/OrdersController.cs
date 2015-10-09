@@ -46,7 +46,7 @@ namespace AOACollections.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,DevNum,MovieNumber,OrderDate,Quantity,UserName,OpenDeliveryDate,CloseDeliveryDate")] Order order)
+        public ActionResult Create([Bind(Include = "ID,MovieNumber,OrderDate,Quantity,UserName")] Order order)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace AOACollections.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,DevNum,MovieNumber,OrderDate,Quantity,UserName,OpenDeliveryDate,CloseDeliveryDate")] Order order)
+        public ActionResult Edit([Bind(Include = "ID,MovieNumber,OrderDate,Quantity,UserName")] Order order)
         {
             if (ModelState.IsValid)
             {
